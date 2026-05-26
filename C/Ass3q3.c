@@ -1,46 +1,39 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Program      : Character Case Conversion Demo
-// Input        : Single character entered by user
-// Output       : Prints converted character (lowercase to uppercase or vice versa)
-// Methods      : DisplayConvert(), printf(), scanf()
-// Description  : Demonstrates conversion of character case using ASCII manipulation in C.
-// Author       : Samruddh Shivkumar Birajdar
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 #include <stdio.h>
 
-void DisplayConvert(char cValue)
+void DisplayEvenFactor(int iNo)
 {
-    if (cValue >= 'a' && cValue <= 'z')
-    {
-        printf("%c\n", cValue - 'a' + 'A');
-    }
-    else if (cValue >= 'A' && cValue <= 'Z')
-    {
-        printf("%c\n", cValue - 'A' + 'a');
-    }
-    else
-    {
-        printf("%c\n", cValue);
-    }
-}
+    int i = 0;
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Application : Shows conversion of user-entered character between uppercase and lowercase, preserving non-alphabetic input.
-//
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    if (iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+    for (i = 1; i <= iNo; i++)
+    {
+        if ((iNo % i == 0) && (i % 2 == 0))
+        {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+}
 
 int main()
 {
-    char cValue = '\0';
+    int iValue = 0;
 
-    printf("Enter character\n");
-    if (scanf(" %c", &cValue) == 1)
+    printf("Enter number\n");
+    if (scanf("%d", &iValue) == 1)
     {
-        DisplayConvert(cValue);
+        if (iValue != 0)
+        {
+            DisplayEvenFactor(iValue);
+        }
+        else
+        {
+            printf("Zero has no valid even factors.\n");
+        }
     }
     else
     {
