@@ -1,0 +1,43 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Reverse Factor Display Demo
+// Input        : Integer number entered by user
+// Output       : Prints all factors of the number in reverse order
+// Methods      : FactRev(), printf(), scanf()
+// Description  : Demonstrates factor calculation and reverse display using for loop in C.
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <stdio.h>
+
+void FactRev(int iNo)
+{
+    int i = 0;
+
+    for(i = iNo; i >= 1; i--)
+    {
+        if(iNo % i == 0)
+        {
+            printf("%d\t", i);
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Displays factors of a user-entered number in reverse order.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter number: ");
+    scanf("%d", &iValue);
+
+    FactRev(iValue);
+
+    return 0;
+}
