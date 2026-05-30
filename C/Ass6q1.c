@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Number Size Classification Demo
+// Input        : Integer number entered by user
+// Output       : Prints Small / Medium / Large based on range
+// Methods      : Number(), printf(), scanf()
+// Description  : Demonstrates conditional classification of numbers in C.
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Input : 75
+// Output : Medium
+
+#include<stdio.h>
+
+void Number(int iNo)
+{   
+    if(iNo < 50)
+        printf("Small");
+    else if(iNo > 50 && iNo < 100)
+        printf("Medium");
+    else
+        printf("Large");
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Classifies user-entered number as Small, Medium, or Large.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter number:");
+    scanf("%d",&iValue);
+
+    Number(iValue);
+
+    return 0;
+}
