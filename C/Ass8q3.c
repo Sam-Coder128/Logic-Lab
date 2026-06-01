@@ -1,0 +1,51 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Kilometer to Meter Conversion Demo
+// Input        : Integer distance in kilometers entered by user
+// Output       : Prints distance in meters
+// Methods      : KMtoMeter(), printf(), scanf()
+// Description  : Demonstrates conversion of kilometers to meters in C.
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Input : 5
+// Output : 5000
+
+// Input : 12
+// Output : 12000
+
+#include<stdio.h>
+
+int KMtoMeter(int iNo)
+{
+    return iNo * 1000;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Converts kilometers to meters.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0, iRet = 0;
+
+    printf("Enter distance:");
+    scanf("%d",&iValue);
+
+    iRet = KMtoMeter(iValue);
+
+    printf("Distance in meters is : %d",iRet);
+
+    return 0;
+}
+
+/*
+Time Complexity : O(1)
+
+Explanation:
+No loop is used.
+Only one conversion is required.
+*/
