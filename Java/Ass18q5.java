@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Check Sign Demo
+// Input        : Integer number
+// Output       : Whether the number is positive, negative, or zero
+// Methods      : checkSign(), System.out.println()
+// Description  : Checks sign of a given number
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    void checkSign(int iNo)
+    {
+        if(iNo > 0)
+            System.out.println(iNo + " is Positive");
+        else if(iNo < 0)
+            System.out.println(iNo + " is Negative");
+        else
+            System.out.println("Number is Zero");
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Demonstrates sign check of a number.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class A18q5
+{
+    public static void main(String[] args)
+    {
+        Logic lobj = new Logic();
+        lobj.checkSign(-10);
+    }
+}
