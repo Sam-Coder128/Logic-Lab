@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Smallest Digit Demo
+// Input        : 45872
+// Output       : Smallest digit : 2
+// Description  : Finds smallest digit from a given number
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    void findSmallestDigit(int iNo)
+    {
+        int iDigit = 0;
+        int iMin = 9;
+
+        while(iNo > 0)
+        {
+            iDigit = iNo % 10;
+
+            if(iDigit < iMin)
+            {
+                iMin = iDigit;
+            }
+
+            iNo = iNo / 10;
+        }
+
+        System.out.println("Smallest digit : " + iMin);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Demonstrates finding smallest digit.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class A20q5
+{
+    public static void main(String[] args)
+    {
+        Logic lobj = new Logic();
+        lobj.findSmallestDigit(45872);
+    }
+}
