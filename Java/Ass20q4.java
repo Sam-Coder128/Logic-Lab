@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Largest Digit Demo
+// Input        : 83429
+// Output       : Largest digit : 9
+// Description  : Finds largest digit from a given number
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    void findLargestDigit(int iNo)
+    {
+        int iDigit = 0;
+        int iMax = 0;
+
+        while(iNo > 0)
+        {
+            iDigit = iNo % 10;
+
+            if(iDigit > iMax)
+            {
+                iMax = iDigit;
+            }
+
+            iNo = iNo / 10;
+        }
+
+        System.out.println("Largest digit : " + iMax);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Demonstrates finding largest digit.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class A20q4
+{
+    public static void main(String[] args)
+    {
+        Logic lobj = new Logic();
+        lobj.findLargestDigit(83429);
+    }
+}
