@@ -1,0 +1,43 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Count Factors Demo
+// Input        : 12
+// Output       : Factor Count : 6
+// Description  : Counts total number of factors of a given number
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    void countFactors(int iNo)
+    {
+        int iCnt = 0;
+        int iFactorCnt = 0;
+
+        for(iCnt = 1; iCnt <= iNo; iCnt++)
+        {
+            if(iNo % iCnt == 0)
+            {
+                iFactorCnt++;
+            }
+        }
+
+        System.out.println("Factor Count : " + iFactorCnt);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Demonstrates counting factors of a number.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class A21q4
+{
+    public static void main(String[] args)
+    {
+        Logic lobj = new Logic();
+        lobj.countFactors(12);
+    }
+}
