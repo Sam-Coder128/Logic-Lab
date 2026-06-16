@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Display Factors Demo
+// Input        : 12
+// Output       : Factors : 1 2 3 4 6 12
+// Description  : Displays all factors of a given number
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    void displayFactors(int iNo)
+    {
+        int iCnt = 0;
+
+        System.out.print("Factors : ");
+        for(iCnt = 1; iCnt <= iNo; iCnt++)
+        {
+            if(iNo % iCnt == 0)
+            {
+                System.out.print(iCnt + " ");
+            }
+        }
+        System.out.println();
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Demonstrates displaying factors of a number.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class A21q3
+{
+    public static void main(String[] args)
+    {
+        Logic lobj = new Logic();
+        lobj.displayFactors(12);
+    }
+}
