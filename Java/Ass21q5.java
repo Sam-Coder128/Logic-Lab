@@ -1,0 +1,42 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Print Numbers Divisible by 2 and 3 Demo
+// Input        : 30
+// Output       : Numbers : 6 12 18 24 30
+// Description  : Prints numbers divisible by both 2 and 3
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    void printDivisible2And3(int iNo)
+    {
+        int iCnt = 0;
+
+        System.out.print("Numbers : ");
+        for(iCnt = 1; iCnt <= iNo; iCnt++)
+        {
+            if((iCnt % 2 == 0) && (iCnt % 3 == 0))
+            {
+                System.out.print(iCnt + " ");
+            }
+        }
+        System.out.println();
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Demonstrates printing numbers divisible by 2 and 3.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class A21q5
+{
+    public static void main(String[] args)
+    {
+        Logic lobj = new Logic();
+        lobj.printDivisible2And3(30);
+    }
+}
