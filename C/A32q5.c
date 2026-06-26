@@ -1,0 +1,55 @@
+// Input  : "MarvellouS"
+// Output : 0
+//
+// Input  : "MarvellouS Infosystems"
+// Output : 1
+//
+// Input  : "MarvellouS Infosystems by Piyush Manohar Khairnar"
+// Output : 5
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Program      : Count Whitespaces in String Demo
+// Description  : Counts number of whitespace characters in string
+// Author       : Samruddh Shivkumar Birajdar
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+int CountWhite(char *str)
+{
+    int iCnt = 0;
+
+    while(*str != '\0')
+    {
+        if(*str == ' ')
+        {
+            iCnt++;
+        }
+        str++;
+    }
+
+    return iCnt;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Application : Counts whitespaces in string.
+//
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char arr[50];
+    int iRet = 0;
+
+    printf("Enter string : ");
+    scanf("%[^'\n']s",arr);
+
+    iRet = CountWhite(arr);
+
+    printf("%d",iRet);
+
+    return 0;
+}
